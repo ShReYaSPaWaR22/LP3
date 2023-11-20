@@ -1,0 +1,15 @@
+def fibonacci(t1,t2,n):
+    fibonacci_list = [t1,t2]
+    for i in range(n-2):
+        nextTerm = t1+t2
+        fibonacci_list.append(nextTerm)
+        t1 = t2
+        t2 = nextTerm
+    return fibonacci_list
+    
+n = int(input("Enter the range of the Fibonacci Series : "))
+t1 = int(input("Enter the 1st term of the Fibonacci Series : "))
+t2 = int(input("Enter the 2nd term of the Fibonacci Series : "))
+nextTerm = 0
+
+print(fibonacci(t1,t2,n))

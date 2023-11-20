@@ -1,0 +1,13 @@
+def fibonacci_recursive(n,t1,t2):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return [t1]
+    else:
+        return [t1] + fibonacci_recursive(n - 1, t2, t1 + t2)
+
+n = int(input("Enter the number of terms in the Fibonacci series: "))
+t1 = int(input("Enter the first term of the Fibonacci series: "))
+t2 = int(input("Enter the second term of the Fibonacci series: "))
+
+print("The Fibonacci series:", fibonacci_recursive(n,t1,t2))
